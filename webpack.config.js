@@ -15,16 +15,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jpg$/i,
+        test: /\.jpg$/,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name (file) {
-                return "[path][name].[ext]"
+              name(file) {
+                return '[path][name].[ext]';
               },
               publicPath: function(url) {
-                return url.replace("../", "/assets/")
+                return url.replace('../', '/assets/')
               }
             }
           },
